@@ -1,0 +1,167 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+:root {
+    /* Renk değişkenleri tanımlanmıştır */
+    --blue: rgb(94, 167, 198);
+    --aqua: #b4fee7;
+    --violet: #6ab4e8;
+    --likewhite: #ececec;
+    --white: #efefef;
+    --black: #222;
+    --trueBlack: #000;
+}
+
+/* Hakkımızda içeriği genişliği ve ortalamak için stil */
+.AboutUs_inside {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Kartlar için grid düzeni ve aralarındaki boşluk ayarı */
+.AboutUs_cards {
+    display: grid;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 5%;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+}
+
+/* Her kart elemanının stil özellikleri */
+.AboutUs_cards_item {
+    display: flex;
+}
+
+/* Kart resimlerinin stil özellikleri */
+.AboutUs_card_image {
+    display: flex;
+    height: 250px;
+    box-shadow: 0 50px 100px 0 var(--violet);
+}
+
+    /* Kart resmi içindeki img elementinin stil özellikleri */
+    .AboutUs_card_image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+/* Kartların genel stil özellikleri */
+.AboutUs_card {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--blue);
+    border-radius: 25px 25px 25px 25px;
+    transition: transform 0.1s linear, box-shadow 0.2s;
+}
+
+    /* Karta odaklandığında veya üzerine gelindiğinde stil değişiklikleri */
+    .AboutUs_card:focus,
+    .AboutUs_card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+    }
+
+/* Kart içeriği stil özellikleri */
+.AboutUs_card_content {
+    padding: 0.5rem 1rem 1rem;
+    color: var(--white);
+}
+
+/* Hakkımızda başlığı stil özellikleri */
+.AboutUs_inside h1 {
+    font-size: 55px;
+    text-align: center;
+    font-family: Georgia, Times, serif;
+    color: #001d3d;
+    padding: 0.5rem;
+}
+
+/* Kart başlığı stil özellikleri */
+.AboutUs_card_title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: auto;
+    color: var(--black);
+    padding: 0.5rem;
+    border-radius: 5px 0 0 5px;
+    transform: normal;
+    transform-origin: left top;
+    font-family: Georgia, Times, serif;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Kart metni stil özellikleri */
+.AboutUs_card_text {
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica, Helvetica Neue, Arial, sans-serif;
+    line-height: 1.5;
+    text-size-adjust: 0.2px;
+    padding: 0 1rem;
+}
+
+/* Ekran genişliği 480px'den büyükse, kart metni için ek stiller */
+@media (min-width: 480px) {
+    .AboutUs_card_text {
+        overflow: auto;
+        max-height: 20rem;
+        scrollbar-width: thin;
+        scrollbar-color: var(--aqua) var(--violet);
+    }
+
+        /* Scrollbar stilleri */
+        .AboutUs_card_text::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .AboutUs_card_text::-webkit-scrollbar-track {
+            background: var(--violet);
+        }
+
+        .AboutUs_card_text::-webkit-scrollbar-thumb {
+            background-color: var(--aqua);
+        }
+}
+
+/* Kart metni içindeki güçlü vurgu stilleri */
+.AboutUs_card_text strong {
+    color: var(--aqua);
+}
+
+/* Not bölümü stil özellikleri */
+.AboutUs_note {
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: 900;
+    background-image: linear-gradient( -45deg, transparent 10%, var(--aqua) 10.5%, var(--aqua) 90%, transparent 90.5% );
+    color: var(--black);
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Sayfa scrollbar stilleri */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(185, 191, 190);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--likewhite);
+}

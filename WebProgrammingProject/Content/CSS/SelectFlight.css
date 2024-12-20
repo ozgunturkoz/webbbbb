@@ -1,0 +1,122 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.text-line {
+    display: flex;
+    align-items: center;
+}
+
+.radio {
+    margin-right: 10px;
+}
+
+
+.Step-Flight {
+    margin-top: 10%;
+    width: 60%;
+    border-radius: 6px;
+    border: 4px solid rgb(6, 14, 118);
+    display: inline-block;
+    display: flex;
+}
+
+.material-symbols-outlined {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 7%;
+}
+
+.Step-Flight-h3 {
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.Passenger-Details-h3 {
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.Additional-Services-h3 {
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.Payment-h3 {
+    display: inline-block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.Cut-Line {
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: -4%;
+    height: 60px;
+    width: 1px;
+    background-color: rgb(6, 14, 118);
+    border-radius: 6px;
+}
+
+.Select-flight-detail {
+    border-radius: 5px;
+    padding: 50px;
+    margin: 20px;
+    background-color: rgb(6, 14, 118);
+    margin-top:3%;
+}
+
+.Flight-List {
+    width: 90%;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.181);
+    border-radius: 10px;
+    margin: 5%;
+}
+
+#continueBtn {
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    margin-top: 1%;
+    margin-left: 70%;
+    margin-bottom: 8%;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #888888, -6px -6px 12px #ffffff;
+}
+
+    #continueBtn::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgb(6, 14, 118) 0%, rgb(104, 132, 255) 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+
+    #continueBtn:hover::before {
+        width: 9em;
+    }

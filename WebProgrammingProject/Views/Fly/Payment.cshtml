@@ -1,0 +1,289 @@
+﻿@using WebProgrammingProject.Models
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Payment";
+}
+
+@model Payment_Status
+
+@{
+    // Retrieve the success message from TempData
+    var paymentMessage = TempData["PaymentMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(paymentMessage))
+{
+    <script>
+        // Display an alert with the success message
+        alert('@paymentMessage');
+    </script>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/Content/CSS/Payment.css" />
+    <script src="~/Content/JS/Payment.js" defer></script>
+    <link rel="stylesheet" href="~/Content/CSS/SelectFlight.css" />
+    <script src="~/Content/JS/PaymentMessage.js" defer></script>
+
+
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+material-symbols-outlined"
+          rel="stylesheet" />
+    <title>Payment</title>
+
+    <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+<body>
+    <style>
+        .Cut-Line {
+            margin: 9px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paymentAccordions = document.querySelectorAll(".paymentAcordion");
+
+            paymentAccordions.forEach((paymentAccordion) => {
+                const header = paymentAccordion.querySelector(".paymentHeader");
+
+                header.addEventListener("click", () => {
+                    paymentAccordion.classList.toggle("active");
+
+                    paymentAccordions.forEach((item) => {
+                        if (item !== paymentAccordion && item.classList.contains("active")) {
+                            item.classList.remove("active");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+
+        function submitPayment() {
+
+            const firstName = document.getElementById("FirstName").value;
+            const lastName = document.getElementById("LastName").value;
+            const email = document.getElementById("Email").value;
+            const cardNumber = document.getElementById("CardNumber").value;
+            const expiryDate = document.getElementById("ExpiryDate").value;
+            const cvv = document.getElementById("Cvv").value;
+
+
+            if (firstName === '' || lastName === '' || email === '' || cardNumber === '' || expiryDate === '' || cvv === '') {
+                alert('Please fill in all fields before submitting.');
+            } else {
+
+                alert('Payment successful!\n');
+            }
+        }
+    </script>
+
+    <header>
+        <!-- Site başlığı -->
+        <a href="@Url.Action("Index", "Home")" class="Skyfly">SKY LINES</a>
+
+        <!-- Arama kutusu -->
+        <div class="search-bar-container active">
+            <!-- Arama ikonu -->
+            <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/magnifier-512.png"
+                 alt="magnifier"
+                 class="magnifier" />
+            <!-- Arama inputu -->
+            <input type="text" class="input" placeholder="Search ..." />
+        </div>
+
+        <!-- Navigasyon menüsü -->
+        <nav>
+            <!-- Menü bağlantıları -->
+            <a class="navigation-a" href="@Url.Action("Index", "Home")">Home</a>
+            <a class="navigation-a" href="@Url.Action("About", "Home")">About</a>
+            <a class="navigation-a" href="@Url.Action("Contact", "Home")">Contact</a>
+            <a class="navigation-a" href="@Url.Action("Login", "Account")">Login</a>
+        </nav>
+    </header>
+
+
+    <!-- ************************************PAYMENT PART*********************************************-->
+
+    <div class="Step-Flight">
+        <a href="@Url.Action("SelectFlight", "Fly")">
+            <span class="material-symbols-outlined">travel</span>
+            <h3 class="Step-Flight-h3">Select Flight</h3>
+        </a>
+        <div class="Cut-Line"></div>
+        <a href="@Url.Action("PassengerDetails", "Fly")">
+            <span class="material-symbols-outlined">person</span>
+            <h3 class="Passenger-Details-h3">Passenger Details</h3>
+        </a>
+        <div class="Cut-Line"></div>
+        <a href="@Url.Action("AdditionalServices", "Fly")">
+            <span class="material-symbols-outlined">airplane_ticket</span>
+            <h3 class="Additional-Services-h3">Additional Services</h3>
+        </a>
+        <div class="Cut-Line"></div>
+        <a href="@Url.Action("Payment", "Fly")">
+            <span class="material-symbols-outlined">credit_card</span>
+            <h3 style="color:blue;" Payment-h3">Payment</h3>
+        </a>
+    </div>
+
+    <section class="ticketInfo">
+    </section>
+
+    <section class="payment" id="payment">
+        <h1 class="paymentTitle">Choose Payment Method</h1>
+
+        <div style="width:100%; margin-top:5%;" class="paymentAcordion">
+            <div class="paymentHeader">
+                <h3>Credit card <ion-icon name="card-outline"></ion-icon></h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+
+            </div>
+            <div class="paymentIndex">
+
+
+                <div class="payment-form">
+
+                    <div class="form_group" field>
+
+                        @using (Html.BeginForm())
+                        {
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.FirstName, new { @class = "form__field", placeholder = "First Name", required = "required" })
+                                @Html.LabelFor(m => m.FirstName, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.FirstName)
+                            </div>
+
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.LastName, new { @class = "form__field", placeholder = "Last Name", required = "required" })
+                                @Html.LabelFor(m => m.LastName, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.LastName)
+                            </div>
+
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form__field", placeholder = "E-mail Address", required = "required" })
+                                @Html.LabelFor(m => m.Email, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </div>
+
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.CardNumber, new { @class = "form__field", placeholder = "Enter card number", required = "required" })
+                                @Html.LabelFor(m => m.CardNumber, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.CardNumber)
+                            </div>
+
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.ExpiryDate, new { @class = "form__field", placeholder = "MM/YYYY", type = "date", required = "required" })
+                                @Html.LabelFor(m => m.ExpiryDate, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.ExpiryDate)
+                            </div>
+
+                            <div class="form_group" field>
+                                @Html.TextBoxFor(m => m.Cvv, new { @class = "form__field", placeholder = "Enter CVV", required = "required" })
+                                @Html.LabelFor(m => m.Cvv, new { @class = "form__label" })
+                                @Html.ValidationMessageFor(m => m.Cvv)
+                            </div>
+
+                            <button onclick="submitPayment()">Submit Payment</button>
+
+
+                        }
+
+
+
+                    </div>
+
+
+
+
+                    <br><div class="horizontal-divider"><hr class="solid"></div><br>
+
+                    <p><strong><ion-icon name="alert-circle-outline"></ion-icon>Important! &nbsp;</strong></p>
+                    <p>As Sky Lines is based in Türkiye, your bank may charge you an additional processing fee when you purchase online tickets with credit cards not issued by Turkish banks. Please consult your bank for more details. &nbsp;</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="paymentAcordion">
+            <div class="paymentHeader">
+                <h3>EFT</h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+
+            </div>
+            <div class="paymentIndex">
+                <p><strong><ion-icon name="alert-circle-outline"></ion-icon>Information &nbsp;</strong></p>
+                <p>Your ticket will be issued when you complete your payment within the options period given after completing your reservation.&nbsp;</p>
+
+                <br><div class="horizontal-divider"><hr class="solid"></div><br>
+
+                <p><strong><ion-icon name="alert-circle-outline"></ion-icon>Important! &nbsp;</strong></p>
+                <p>Payments over the FAST limit must be made during the working hours of the banks.&nbsp;</p>
+                <p>Please transfer the exact ticket amount as shown on the screen into your Sky Lines account. Your bank and Sky Lines are not responsible for any problems that arise from failure to follow this instruction.&nbsp;</p>
+                <p>EFT payments can only be made from banks in Türkiye. EFT payments from banks outside Türkiye are not accepted.&nbsp;</p>
+                <p>You cannot make EFT payments from İş Bankası. If you would like to make a payment from an İş Bankası account, please select the Internet banking option.&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="paymentAcordion">
+            <div class="paymentHeader">
+                <h3>Internet Banking</h3>
+
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+
+            </div>
+            <div class="paymentIndex">
+                <p><strong><ion-icon name="alert-circle-outline"></ion-icon>Information &nbsp;</strong></p>
+                <p>You can complete payment using the online services of one of the above banks at any time during the options period given to you after completing your reservation.&nbsp;</p>
+
+                <br><div class="horizontal-divider"><hr class="solid"></div><br>
+
+                <p><strong><ion-icon name="alert-circle-outline"></ion-icon>Important! &nbsp;</strong></p>
+                <p>In payments made outside of our online channels (website/mobile app), the ticket price may change depending on the ticketing service fee applied by the sales channel. Sky Linesines reserves the right to change ticket prices at any time between the moment of booking and the moment of completion of the ticketing process, without any notice.&nbsp;</p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="ticketDetails">
+    </section>
+
+
+
+    <!-- Ionicons ikonları için gerekli script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</body>
+</html>
+
+
+
+

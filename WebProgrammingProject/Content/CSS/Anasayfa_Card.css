@@ -1,0 +1,190 @@
+﻿/* Google Fonts'tan dört farklı font'u içe aktar */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lilita+One&family=Pacifico&family=Playfair+Display&family=Roboto:wght@500&display=swap');
+
+/* Ana kart container'ı flex container olarak ayarla */
+.container-card {
+    display: flex; /* Flexbox kullanımı */
+    flex-direction: column; /* Dikey yönde sırala */
+}
+
+/* Kartları saran wrapper'ı genişlet ve ortala */
+.wrappercard {
+    width: 90%; /* Genişlik yüzde 90 */
+    margin: 0 auto; /* Sol ve sağ kenardan otomatik margin */
+    max-width: 80rem; /* Maksimum genişlik 80rem */
+}
+
+/* Kart başlıklarını stilize et */
+.wrappercard-title {
+    margin-left: 15%; /* Sol kenardan 15% içeriye kaydır */
+    font-size: 48px; /* Yazı boyutu 48px */
+    font-family: 'Agbalumo', cursive; /* Yazı fontu */
+    color: black; /* Yazı rengi beyaz */
+}
+
+/* Kart sütunlarını düzenle */
+.cols {
+    display: flex; /* Flexbox kullanımı */
+    flex-wrap: wrap;
+    justify-content: center; /* İçeriği ortala */
+}
+
+/* Kart sütunlarının genel stilini belirle */
+.col {
+    width: calc(25% - 2rem); /* Genişlik yüzde 25, kenar boşlukları çıkarılmış 2rem azaltılmış */
+    margin: 3rem; /* Kenarlardan 3rem iç boşluk bırak */
+    cursor: pointer; /* Üzerine gelindiğinde imleci göster */
+}
+
+/* Kartların 3D görünümünü sağlamak için container'ı yapılandır */
+.container {
+    -webkit-transform-style: preserve-3d; /* 3D dönüşleri koru */
+    transform-style: preserve-3d; /* 3D dönüşleri koru */
+    -webkit-perspective: 1000px; /* 3D etkisi için bakış açısı */
+    perspective: 1000px; /* 3D etkisi için bakış açısı */
+}
+
+/* Kartın ön ve arka yüzünün temel stilini belirle */
+.front,
+.back {
+    background-size: cover; /* Arkaplan resmini kapla */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25); /* Kutu gölgesi efekti */
+    border-radius: 10px; /* Kenar yuvarlaklığı 10px */
+    background-position: center; /* Arkaplan resminin ortala */
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    -webkit-backface-visibility: hidden; /* Arkadan görünürlüğü engelle */
+    backface-visibility: hidden; /* Arkadan görünürlüğü engelle */
+    text-align: center; /* Metni ortala */
+    min-height: 280px; /* Minimum yükseklik 280px */
+    box-shadow: 0 0 10px solid blue; /* Kutu gölgesi efekti */
+    height: auto; /* Yüksekliği otomatik ayarla */
+    border-radius: 10px; /* Kenar yuvarlaklığı 10px */
+    color: #fff; /* Yazı rengi beyaz */
+    font-size: 1.5rem; /* Yazı boyutu 1.5rem */
+}
+
+/* Kartın arka yüzünü özelleştir */
+.back {
+    background: #cedce7; /* Arkaplan rengi gri tonlarından bir gradient */
+    background: -webkit-linear-gradient(45deg, rgb(12, 173, 242) 0%, rgb(6, 14, 118) 100%); /* WebKit tarayıcıları için gradient */
+    background: -o-linear-gradient(45deg, rgb(12, 173, 242) 0%, rgb(6, 14, 118) 100%); /* Eski Opera tarayıcıları için gradient */
+    background: linear-gradient(45deg, rgb(12, 173, 242) 0%, rgb(6, 14, 118) 100%); /* Standart tarayıcılar için gradient */
+}
+
+/* Kartın ön yüzüne overlay efekti ekle */
+.front:after {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 0; /* Üstten sıfır piksel uzaklıkta */
+    left: 0; /* Soldan sıfır piksel uzaklıkta */
+    z-index: 1; /* Z sırası 1 */
+    width: 100%; /* Genişlik yüzde 100 */
+    height: 100%; /* Yükseklik yüzde 100 */
+    content: ''; /* İçerik ekleme */
+    display: block; /* Blok öğe olarak görüntüleme */
+    opacity: .6; /* Opaklık 0.6 */
+    background-color: #000; /* Arkaplan rengi siyah */
+    -webkit-backface-visibility: hidden; /* Arkadan görünürlüğü engelle */
+    backface-visibility: hidden; /* Arkadan görünürlüğü engelle */
+    border-radius: 10px; /* Kenar yuvarlaklığı 10px */
+}
+
+/* Hover durumunda kartları döndürerek göster */
+.container:hover .front,
+.container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); /* Süreklilik ve yumuşaklık için geçiş efekti */
+}
+
+/* Kartın arka yüzünü döndürerek göster */
+.back {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 0; /* Üstten sıfır piksel uzaklıkta */
+    left: 0; /* Soldan sıfır piksel uzaklıkta */
+    width: 100%; /* Genişlik yüzde 100 */
+}
+
+/* Kart içeriğini düzenle */
+
+/* Kart içeriğini düzenle */
+.inner {
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94); /* 3D dönüş ve ölçekleme yaparak kart içeriğini düzenle */
+    transform: translateY(-50%) translateZ(60px) scale(0.94); /* 3D dönüş ve ölçekleme yaparak kart içeriğini düzenle */
+    top: 50%; /* Üst kenarı kartın ortasına hizala */
+    position: absolute; /* Mutlak konumlandırma */
+    left: 0; /* Sol kenardan 0px uzaklıkta */
+    width: 100%; /* Genişlik yüzde 100 */
+    padding: 2rem; /* Dolgu miktarı 2rem (16px) */
+    -webkit-box-sizing: border-box; /* Kutu modelini belirleme - border-box */
+    box-sizing: border-box; /* Kutu modelini belirleme - border-box */
+    outline: 1px solid transparent; /* Şeffaf bir çizgi ile çerçeve çiz */
+    -webkit-perspective: inherit; /* 3D perspektifi miras al */
+    perspective: inherit; /* 3D perspektifi miras al */
+    z-index: 2; /* Z indeksi 2 */
+}
+
+/* Kartın arka yüzünü 180 derece döndürerek göster */
+.container .back {
+    -webkit-transform: rotateY(180deg); /* Y ekseninde 180 derece döndürme */
+    transform: rotateY(180deg); /* Y ekseninde 180 derece döndürme */
+    -webkit-transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+    transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+}
+
+/* Kartın ön yüzünü 180 derece döndürerek göster */
+.container .front {
+    -webkit-transform: rotateY(0deg); /* Y ekseninde 0 derece döndürme */
+    transform: rotateY(0deg); /* Y ekseninde 0 derece döndürme */
+    -webkit-transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+    transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+}
+
+/* Hover durumunda kartın arka yüzünü döndürerek göster */
+.container:hover .back {
+    -webkit-transform: rotateY(0deg); /* Y ekseninde 0 derece döndürme */
+    transform: rotateY(0deg); /* Y ekseninde 0 derece döndürme */
+    -webkit-transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+    transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+}
+
+/* Hover durumunda kartın ön yüzünü döndürerek göster */
+.container:hover .front {
+    -webkit-transform: rotateY(-180deg); /* Y ekseninde -180 derece döndürme */
+    transform: rotateY(-180deg); /* Y ekseninde -180 derece döndürme */
+    -webkit-transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+    transform-style: preserve-3d; /* 3D dönüş stilini koruma */
+}
+
+/* Kartın ön yüzündeki başlık ve içerik stilini belirle */
+.front .inner p {
+    font-size: 2rem; /* Yazı boyutu 2rem (16px) */
+    margin-bottom: 2rem; /* Alt kenardan 2rem (16px) boşluk bırak */
+    position: relative; /* Göreceli konumlandırma */
+}
+
+    /* Kartın ön yüzündeki başlık altına bir çizgi ekleyerek ayrıntı ekle */
+    .front .inner p:after {
+        content: ''; /* İçerik yok */
+        width: 4rem; /* Çizginin genişliği 4rem (32px) */
+        height: 2px; /* Çizginin yüksekliği 2px */
+        position: absolute; /* Mutlak konumlandırma */
+        background: #C6D4DF; /* Çizgi rengi gri tonu */
+        display: block; /* Blok olarak görüntüle */
+        left: 0; /* Sol kenardan 0px uzaklıkta */
+        right: 0; /* Sağ kenardan 0px uzaklıkta */
+        margin: 0 auto; /* Kenar boşluğunu otomatik olarak ayarla */
+        bottom: -.75rem; /* Alt kenardan -0.75rem uzaklıkta */
+    }
+
+/* Kartın içerisindeki ekstra metni stilize et */
+.front .inner span {
+    color: rgba(255, 255, 255, 0.995); /* Yazı rengi beyaz ve hafif şeffaf */
+    font-family: 'Montserrat'; /* Yazı fontu Montserrat */
+    font-weight: 300; /* Yazı kalınlığı 300 */
+}

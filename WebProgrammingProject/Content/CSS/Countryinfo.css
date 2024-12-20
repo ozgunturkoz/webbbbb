@@ -1,0 +1,99 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.custom-body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    margin-bottom: 3%;
+}
+
+.custom-header {
+    background-color: rgba(204, 204, 204, 0.432);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.custom-section {
+    max-width: 1345px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-h1 {
+    margin-bottom: 20px;
+}
+
+.custom-img {
+    max-width: 1160px;
+    max-height: 781px;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.custom-info-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.custom-info-box {
+    width: 18%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-right: 0%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 1%;
+}
+
+@media (max-width: 768px) {
+    .custom-info-box {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-info-box {
+        width: 100%;
+    }
+}
+
+.box {
+    width: 35px;
+    height: 35px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 20px;
+    float: left;
+}
+
+.box-text {
+    margin-top: -1%;
+    font-size: 18px;
+}
+
+.custom-info-box h3 {
+    font-size: 16px;
+    margin-top: 5%;
+}
+
+.custom-info-box p {
+    float: left;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.custom_img {
+    width: 1305px;
+    height: 781px;
+}

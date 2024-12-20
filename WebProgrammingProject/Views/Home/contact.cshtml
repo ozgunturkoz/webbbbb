@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contact";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width= device-with, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/ContactUs.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+<body>
+
+    <h1 class="ContactUsTitle">Contact Us</h1>
+
+    <img style="width: 100%; height: auto;" src="~/WebPhoto/operator.jpg" alt="operator" />
+    <div class="All">
+
+
+
+
+        <section class="contact_us">
+
+
+
+            <div class="baslik">
+
+
+                <div class="ways_contact">
+                    <div class="message_box">
+                        <div class="send_message">
+                            <h2>Send Message</h2>
+                            <form>
+
+                                <div class="message">
+                                    <input style=" border: 2px solid rgb(12, 173, 242);" type="text" name="name" maxlength=30 placeholder="Your First Name" required></b>
+                                </div>
+
+                                <div class="message">
+                                    <input style=" border: 2px solid rgb(12, 173, 242);" type="text" name="name" maxlength=30 placeholder="Your Last Name"required></b>
+                                </div>
+
+                                <div class="message">
+                                    <input style=" border: 2px solid rgb(12, 173, 242);" type="email" name="email" placeholder="Your Email"required></b>
+                                </div>
+
+                                <div class="message">
+                                    <textarea style=" border: 2px solid rgb(12, 173, 242);" type="message" placeholder="Your Message" required></textarea></b>
+                                </div>
+
+                                <button style=" border: 2px solid rgb(12, 173, 242);" class="button_send" type="button" onclick="alert('Your message has been delivered. We will respond as soon as possible.') ">Send</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="info_box">
+                        <div class="contact_info">
+                            <h2>Contact Informations</h2>
+
+                            <p><ion-icon name="call"></ion-icon> 0 (212) 641 00 00</p>
+
+                            <p><ion-icon name="mail"></ion-icon>  skyline@hotmail.com</p>
+
+                            <p><ion-icon name="location"></ion-icon>  Istiklal Caddesi Doğan Apt. No:20 Taksim </p>
+
+                            <a herf="https://www.instagram.com/"><ion-icon class="socail_icons" name="logo-instagram"></ion-icon></a> <ion-icon class="socail_icons" name="logo-facebook"></ion-icon> <ion-icon class="socail_icons" name="logo-twitter"></ion-icon><ion-icon class="socail_icons" name="logo-linkedin"></ion-icon>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+    </div>
+</body>
+</html>
+

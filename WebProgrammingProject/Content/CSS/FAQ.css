@@ -1,0 +1,120 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+/* ---body stil kuralları--- */
+.FAQ {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+/* ---main page stil kuralları--- */
+.main-page {
+    margin-top: 28%;
+    margin-bottom: 1%;
+    min-height: 90%;
+    width: 100%;
+}
+
+/* ---menu (sol menü) stil kuralları--- */
+#menu {
+    float: left;
+    width: 25%;
+    background-color: rgb(12, 173, 242);
+    padding: 1.25em;
+    height: 109%;
+    margin-top: -1%;
+    margin-left: 0;
+}
+
+    #menu h2 {
+        margin-bottom: 0.625em;
+        color: #fff;
+        text-align: center;
+        font-size: 4.0625em;
+        font-family: sans-serif;
+    }
+
+    #menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        /* ---liste öğeleri arasındaki boşluk--- */
+
+        #menu ul li {
+            margin-bottom: 0.9375em;
+        }
+
+            #menu ul li a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.875em;
+                font-family: sans-serif;
+            }
+
+/* ---FAQ container (sağ içerik) stil kuralları--- */
+.FAQcontainer {
+    float: left;
+    width: 75%;
+    height: 0em;
+    padding: 1.25em;
+    background-color: #fff;
+}
+
+    .FAQcontainer p {
+        text-align: center;
+        font-size: 1.25em;
+        margin-top: 9.375em;
+        font-family: sans-serif;
+    }
+
+/* ---accordion stil kuralları--- */
+.accordion {
+    width: 100%;
+    margin-top: 7%;
+}
+
+    .accordion p {
+        text-align: left;
+        font-family: sans-serif;
+    }
+
+.accordion-btn {
+    background-color: rgb(12, 173, 242);
+    color: #fff;
+    cursor: pointer;
+    padding: 0.625em;
+    width: 100%;
+    text-align: left;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    margin-bottom: 0.3125em;
+    margin: 0.1875em;
+    font-size: 1.5625em;
+    font-family: sans-serif;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0.625em;
+    border: 0.0625em solid #ccc;
+    border-top: none;
+    border-radius: 0 0 0.25em 0.25em;
+    color: #000;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+    .accordion-content p {
+        margin: 0;
+    }
+
+.accordion li {
+    margin-left: 1.5625em;
+}
+
+.accordion-btn.active {
+    background-color: #ddd;
+}

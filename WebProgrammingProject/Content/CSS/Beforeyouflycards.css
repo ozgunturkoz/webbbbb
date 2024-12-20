@@ -1,0 +1,88 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.byfAll {
+    background-color: rgba(204, 204, 204, 0.432);
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* Ana Bileşen - Grid Container */
+.byf {
+    display: grid; /* Grid düzenini kullan */
+    grid-template-columns: repeat( auto-fit, minmax(80px, 1fr) ); /* Otomatik sütun sayısı belirle, minimum genişlik 80px, maksimum genişlik 1fr (eşit genişlik) */
+    gap: 16px; /* Hücreler arası boşluk 16px */
+    width: 100%; /* Genişlik yüzde 100 */
+    height: 300px; /* Yükseklik 300px */
+    border-radius: 6px; /* Kenar yuvarlaklığı 6px */
+}
+
+/* Başlık Stili */
+.byfh3 {
+    margin-top: 2%;
+    width: 100%; /* Genişlik yüzde 100 */
+    color: #001d3d; /* Yazı rengi beyaz */
+    text-align: center; /* Metni ortala */
+    font-size: 48px; /* Yazı boyutu 48px */
+}
+
+.byfp {
+    width: 100%; /* Genişlik yüzde 100 */
+    color: #001d3d; /* Yazı rengi beyaz */
+    text-align: center; /* Metni ortala */
+    font-size: 32px; /* Yazı boyutu 48px */
+    margin: auto; /* Elementi ortala ve margin'i elementin kapladığı alan kadar ayarla */
+}
+
+/* Kutu Grubu Stili */
+.byfBoxes {
+    width: 100%; /* Genişlik yüzde 100 */
+    text-align: center; /* Metni ortala */
+    padding-left: 55px; /* Sol kenardan iç içe geçmiş öğeler arasındaki boşluk */
+    display: flex; /* Flexbox kullanımı */
+    justify-content: space-between; /* Öğeler arasında eşit boşluk bırak */
+}
+
+/* İçindeki Kutu Stili */
+.byfBox {
+    margin: 50px; /* Kenarlardan 50px iç boşluk bırak */
+    border-radius: 2%; /* Kutu yuvarlaklığı yüzde 50 */
+    width: 15%; /* Genişlik yüzde 15 */
+    height: 200px; /* Yükseklik 200px */
+    margin-top: 40px; /* Üst kenardan 40px boşluk bırak */
+    display: inline-block; /* Blok içinde inline öğeleri düzenleme */
+}
+
+    /* Kutu Üzerine Geldiğinde Stil */
+    .byfBox:hover {
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -2px -2px 10px black; /* Kutu gölgesi efekti */
+        font-size: 24px; /* Yazı boyutunu küçült */
+    }
+
+/* Kutu İçeriği Stili */
+.box-content {
+    position: relative; /* Göreceli konumlandırma */
+    height: 100%; /* Yükseklik yüzde 100 */
+    background-size: cover; /* Arkaplan resmini kapla */
+    background-position: center; /* Arkaplan resminin ortala */
+    border-radius: 10px; /* Kenar yuvarlaklığı 10px */
+    overflow: hidden; /* Taşan içeriği gizle */
+}
+
+/* Kutu İçeriği Başlık Stili */
+.box-contenth3 {
+    text-align: center; /* Metni ortala */
+    margin-top: 10px; /* Üst kenardan 10px boşluk bırak */
+    font-size: 30px; /* Yazı boyutu 30px */
+    font-family: "Agbalumo", cursive; /* Yazı fontu */
+    color: #001d3d; /* Yazı rengi beyaz */
+}
+
+    /* Kutu İçeriği Başlık Hover Stili */
+    .box-contenth3:hover {
+        color: #001d3d; /* Hover durumunda yazı rengi siyah */
+    }
+
+/* Materyal Sembollerine Hover Stili */
+.material-symbols-outlined:hover {
+    color: black; /* Hover durumunda sembol rengi siyah */
+}

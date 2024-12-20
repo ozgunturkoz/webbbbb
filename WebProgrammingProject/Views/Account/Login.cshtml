@@ -1,0 +1,106 @@
+﻿@model WebProgrammingProject.Models.Users
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta etiketleri -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IW = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Sayfa başlığı -->
+    <title>SKY LINE - Login</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+material-symbols-outlined"
+          rel="stylesheet">
+
+    <!-- Font Awesome ikon kitinin bağlantısı -->
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <!-- jQuery kütüphanesini ekleyin -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div class="loginall">
+        <div class="bodyall">
+
+            <div class="logincontainer" id="container">
+                <div class="form-container sign-up-container">
+                    @using (Html.BeginForm("Register", "AccountController", FormMethod.Post))
+                    {
+                        <h1>Create Account</h1>
+
+                        @Html.TextBoxFor(model => model.FName, new { placeholder = "Name", required = "required" })
+                        @Html.TextBoxFor(model => model.LName, new { placeholder = "Surname", required = "required" })
+                        @Html.TextBoxFor(model => model.Email, new { type = "email", placeholder = "Email", required = "required" })
+                        @Html.PasswordFor(model => model.UserPassword, new { placeholder = "Password", required = "required" })
+                        @Html.Password("ConfirmPassword", null, new { placeholder = "Confirm Password", required = "required" })
+
+                        <button type="submit" id="signUpButton">Sign up</button>
+                    }
+
+                </div>
+                <div class="form-container sign-in-container">
+                    <form method="post">
+                        @Html.AntiForgeryToken()
+
+                        <h1>Sign in</h1>
+                        <input type="email" name="Email" placeholder="Email" required />
+                        <input type="password" name="UserPassword" placeholder="Password" required />
+                        <a href="@Url.Action("ForgotPassword", "Account")">Forgot your password?</a>
+                        <button type="submit" id="signInButton">Sign In</button>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (Model.Email == "admin@gmail.com" && Model.UserPassword == "admin")
+                            {
+                                <a href="@Url.Action("SelectFlight", "Fly")"></a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("Index", "Home")"></a>
+                            }
+                        }
+                        else
+                        {
+                        }
+
+
+
+
+
+                    </form>
+
+                </div>
+
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <img src="~/WebPhoto/123.jpg">
+                        <div class="overlay-panel overlay-left">
+
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <img src="~/WebPhoto/123.jpg">
+                        <div class="overlay-panel overlay-right">
+
+
+                            <h1>Get Ready to Journey!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

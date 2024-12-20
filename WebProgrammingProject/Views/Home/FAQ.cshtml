@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "FAQ";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+material-symbols-outlined" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>FAQ Page - Skyline</title>
+
+</head>
+
+<body id="FAQ">
+
+
+    <!-- **************************************************  FAQ PART  **************************************************  -->
+
+    <div style="margin-bottom:10%;margin-top:10%;" class="main-page">
+        <div id="menu">
+            <h2>FAQ</h2>
+            <!-- FAQ menüsü -->
+
+            <ul>
+                <li><a href="#" onclick="goster('checkInInformation')">Check-in Information</a></li>
+                <li><a href="#" onclick="goster('onBoard')">On-Board</a></li>
+                <li><a href="#" onclick="goster('baggage')">Baggage</a></li>
+                <li><a href="#" onclick="goster('registration')">Registration</a></li>
+                <li><a href="#" onclick="goster('cancellationAndRefund')">Cancellation</a></li>
+                <li><a href="#" onclick="goster('reservation')">Reservation</a></li>
+                <li><a href="#" onclick="goster('flightWithPartners')">Flight with Our Partners</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- FAQ içeriği container'ı -->
+
+        <div class="FAQcontainer">
+            <p>
+                <strong>Welcome to Skyline Airways FAQ Page!</strong> <br>Explore the topics on the left table to find
+                answers to your questions.
+                If you can't find what you're looking for, please contact us at info@skyline.com
+            </p>
+
+            <!-- Soruların görüntülendiği container -->
+            <div id="accordion-container">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

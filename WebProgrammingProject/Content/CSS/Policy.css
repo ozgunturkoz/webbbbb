@@ -1,0 +1,71 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.policy {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.policyTitle {
+    margin-top: 100px;
+    font-size: 3rem;
+    color: black;
+}
+
+.policyAcordion {
+    max-width: 85%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+    cursor: pointer;
+}
+
+.policyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .policyHeader h3 {
+        font-size: 1.8rem;
+    }
+
+.policyIndex {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+    .policyIndex p {
+        padding-top: 1rem;
+        line-height: 1.4;
+        font-size: 1.2rem;
+    }
+
+.policyAcordion.active .policyIndex {
+    max-height: 1500px; /*açıldığındaki max yükseklik işleyiş için tanımlanmak zorunda eğer az gelirse buradan gerektiği kadar yükseltilebilir. ne kadar büyürse açılması o kadar yavaşlıyor,çok büyük olması iyi değil! */
+    animation: fade 1s ease-in-out; /*renk soldurma animasyonu*/
+}
+
+.policyAcordion.active svg { /*açıldığında ok işaretini ters yöne döndürmek için*/
+    transform: rotate(180deg);
+}
+
+svg { /*açılırken ok dönerek hareket etsin diye*/
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes fade { /*renk soldurma animasyonu*/
+    from {
+        opacity: 0;
+        transform: translateY(-10);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

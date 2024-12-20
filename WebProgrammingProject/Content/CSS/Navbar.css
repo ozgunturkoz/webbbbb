@@ -1,0 +1,359 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+/* Genel stil ayarları */
+* {
+    /*background-image: url("./WebPhoto/Backgroundphoto.jpg");*/ /* Arka plan resmi */
+    margin: 0; /* Sayfa kenar boşluğu sıfır */
+    padding: 0; /* Sayfa iç boşluğu sıfır */
+    box-sizing: border-box; /* Kutu modeli sıfır iç boşluklu */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Logo ve navbar stil ayarları */
+.logo-navbar {
+    width: 48px; /* Logo genişliği */
+    height: 48px; /* Logo yüksekliği */
+    margin-left: 5%; /* Logo sol kenardan uzaklık */
+}
+
+/* Body (sayfa içeriği) stil ayarları */
+body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: white;
+    display: flex; /* Flex konteynerı olarak düzenleme */
+    justify-content: center; /* İçeriği yatayda ortala */
+    align-items: center; /* İçeriği dikeyde ortala */
+    min-height: 100vh; /* Minimum dikey yükseklik 100 viewport yüksekliği */
+    background-size: cover; /* Arka plan resmi kaplama modu */
+    background-position: center; /* Arka plan resmi konumu ortala */
+}
+
+/* Header (üstbilgi) stil ayarları */
+header {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    background-color: #001d3d;
+    z-index: 1;
+    position: fixed; /* Sabit pozisyon */
+    top: 0; /* Sayfanın en üstüne yapışık */
+    left: 0; /* Sayfanın en soluna yapışık */
+    width: 100%; /* Tam genişlikte */
+    padding: 10px 50px; /* İç ve dış içe boşluklar */
+    display: flex; /* Flex konteynerı olarak düzenleme */
+    justify-content: space-between; /* Boşluğu tam genişlikte paylaşarak iki kenara yerleştir */
+    align-items: center; /* İçeriği dikeyde ortala */
+    z-index: 99; /* Z indeksi (üst üste binme sırası) */
+}
+
+/* Sayfa başlığı stili */
+.Skyfly {
+    background: #001d3d(0, 0, 0, 0.459); /* Arka plan rengi */
+    flex: 1; /* Genişliği esnek ayarla */
+    margin: 0.1em; /* Kenar boşluğu */
+    float: left; /* Sola yaslanmış konumlandırma */
+    font-size: 32px; /* Font boyutu */
+    color: #fff; /* Metin rengi beyaz */
+    user-select: none; /* Kullanıcının metni seçmesini engelleme */
+    text-decoration: none;
+}
+
+/* ------------------------------------------------ ARAMA BUTON -------------------------------------------------- */
+
+/* Arama çubuğu container'ı stili */
+.search-bar-container {
+    background: white; /* Arama çubuğu arkaplan rengi */
+    float: left; /* Sola yaslanmış konumlandırma */
+    display: flex; /* Flex konteynerı olarak düzenleme */
+    align-items: center; /* İçeriği dikeyde ortala */
+    background-color: #ffffff; /* Arama çubuğu arkaplan rengi (alternatif) */
+    padding: 5px; /* İç içe boşluklar */
+    width: 300px; /* Genişlik */
+    height: 50px; /* Yükseklik */
+    border-radius: 50px; /* Kenar yumuşatma */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2), -2px -2px 10px #ffffff; /* Kutu gölgesi */
+    margin: 10px; /* Dış içe boşluklar */
+    position: relative; /* Pozisyon */
+    overflow: hidden; /* Taşan içeriği gizleme */
+    transition: width 1.5s; /* Genişlik değişimine geçiş efekti ekleme */
+}
+
+/* Aktif arama çubuğu container'ı stili */
+.active.search-bar-container {
+    width: 50px; /* Genişlik küçültüldüğünde */
+}
+
+/* Büyüteç simgesi stili */
+.magnifier {
+    background: white; /* Arama çubuğu simgesi arkaplan rengi */
+    margin-right: 30%; /* Sağdan iç içe boşluk */
+    width: 25px; /* Genişlik */
+    cursor: pointer; /* İmleci el simgesine çevirme */
+    position: absolute; /* Sabit pozisyon */
+    left: 20px; /* Soldan iç içe boşluk */
+}
+
+/* Arama çubuğu giriş kutusu stili */
+.input {
+    background: white; /* Giriş kutusu arkaplan rengi */
+    background-color: transparent;
+    border: none; /* Kenarlık yok */
+    margin: 10px 50px; /* Dış içe boşluklar */
+    width: 100%; /* Genişlik tam ekran */
+    outline: none; /* Odaklandığında vurguyu kaldırma */
+    color: rgb(100, 100, 100); /* Metin rengi */
+    transition: width 1s; /* Genişlik değişimine geçiş efekti ekleme */
+    transition-delay: 0.5s; /* Geçiş gecikmesi */
+}
+
+/* Aktif arama çubuğu giriş kutusu stili */
+.active .input {
+    width: 0; /* Genişlik sıfırlandığında (küçültüldüğünde) */
+}
+
+/* ------------------------------------------------ LOGIN  PART -------------------------------------------------- */
+
+/* Navigasyon bağlantıları stili */
+.navigation-a {
+    font-size: 24px; /* Font boyutu */
+    position: relative; /* Pozisyon */
+    color: #fff; /* Metin rengi beyaz */
+    text-decoration: none; /* Alt çizgiyi kaldırma */
+    font-weight: 500; /* Kalınlık */
+    margin-left: 15px; /* Soldan iç içe boşluk */
+}
+
+    /* Navigasyon bağlantıları alt çizgisi stili */
+    .navigation-a::after {
+        content: "";
+        position: absolute;
+        left: 0; /* Soldan iç içe boşluk */
+        bottom: -6px; /* Alt boşluk */
+        width: 100%; /* Tam genişlik */
+        height: 3px; /* Yükseklik */
+        background: #fff; /* Alt çizgi rengi beyaz */
+        border-radius: 5px; /* Kenar yumuşatma */
+        transform-origin: right; /* Dönüş orijini sağ */
+        transform: scaleX(0); /* Başlangıçta genişlik sıfır */
+        transition: transform 0.5s; /* Genişlik değişimine geçiş efekti ekleme */
+    }
+
+    /* Navigasyon bağlantıları üzerine gelindiğinde alt çizgi genişliği stili */
+    .navigation-a:hover::after {
+        transform-origin: left; /* Dönüş orijini sol */
+        transform: scaleX(1); /* Genişlik sıfırdan bir'e geçiş */
+    }
+
+.navbar-login-a {
+    font-size: 24px; /* Font boyutu */
+    position: relative; /* Pozisyon */
+    color: #fff; /* Metin rengi beyaz */
+    text-decoration: none; /* Alt çizgiyi kaldırma */
+    font-weight: 500; /* Kalınlık */
+    margin-left: 15px; /* Soldan iç içe boşluk */
+}
+
+
+/* Wrapper (sarmalayıcı) stili */
+.wrapper {
+    z-index: 2;
+    position: absolute; /* Pozisyon */
+    top: 20%; /* Üstten ortaya hizala */
+    left: 35%; /* Soldan ortaya hizala */
+    transform: translate(-50%, -50%); /* Yatay ve dikeyde ortaya hizala */
+    width: 400px; /* Genişlik */
+    height: 440px; /* Yükseklik */
+    background: transparent; /* Arka plan transparan */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Kenar rengi ve yarı saydamlık */
+    border-radius: 20px; /* Kenar yumuşatma */
+    backdrop-filter: blur(20px); /* Arkaplanı bulanıklaştırma efekti */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Kutu gölgesi */
+    display: flex; /* Flex konteynerı olarak düzenleme */
+    justify-content: center; /* İçeriği yatayda ortala */
+    align-items: center; /* İçeriği dikeyde ortala */
+    overflow: hidden; /* Taşan içeriği gizleme */
+    transform: scale(0); /* Başlangıçta ölçek sıfır */
+    transition: transform 0.5s ease, height 0.2s ease; /* Ölçek ve yükseklik değişimine geçiş efekti ekleme */
+}
+
+    /* Aktif pop-up sarmalayıcı stili */
+    .wrapper.active-popup {
+        transform: scale(1); /* Ölçek bir'e geçiş */
+        margin-bottom: 15%;
+    }
+
+    /* Aktif sarmalayıcı stili */
+    .wrapper.active {
+        height: 520px; /* Yüksekliği artırma */
+        display: flex;
+    }
+
+    /* Form kutusu stili */
+    .wrapper .form-box {
+        width: 100%; /* Genişlik tam ekran */
+        padding: 40px; /* İç içe boşluklar */
+    }
+
+        /* Giriş formu stil ayarları */
+        .wrapper .form-box.login {
+            transition: transform 0.18s ease; /* Giriş formunda geçiş efekti ayarla */
+            transform: translateX(0); /* Başlangıçta giriş formunu görünür kıl */
+        }
+
+    /* Aktif durumdaki giriş formu stil ayarları */
+    .wrapper.active .form-box.login {
+        transition: none; /* Geçiş efektini devre dışı bırak */
+        transform: translateX( -400px ); /* Giriş formunu yatayda 400 piksel sola kaydır */
+    }
+
+    /* Kayıt formu stil ayarları */
+    .wrapper .form-box.register {
+        position: absolute; /* Kayıt formunu sabit bir konuma yerleştir */
+        transition: none; /* Geçiş efektini devre dışı bırak */
+        transform: translateX( 400px ); /* Kayıt formunu yatayda 400 piksel sağa kaydır */
+    }
+
+    /* Aktif durumdaki kayıt formu stil ayarları */
+    .wrapper.active .form-box.register {
+        transition: transform 0.18s ease; /* Kayıt formunda geçiş efekti ayarla */
+        transform: translateX(0); /* Başlangıçta kayıt formunu görünür kıl */
+    }
+
+    /* Kapatma ikonu stil ayarları */
+    .wrapper .icon-close {
+        position: absolute; /* Pozisyonunu mutlak olarak belirle */
+        top: 0; /* Üst kenara yapıştır */
+        right: 0; /* Sağ kenara yapıştır */
+        width: 45px; /* Genişlik 45 piksel */
+        height: 45px; /* Yükseklik 45 piksel */
+        background: rgb(255, 0, 0); /* Arka plan rengi kırmızı */
+        font-size: 2em; /* Yazı boyutu 2em */
+        color: #fff; /* Yazı rengi beyaz */
+        display: flex; /* Flex konteyner olarak kullan */
+        justify-content: center; /* İçeriği yatayda merkezle */
+        align-items: center; /* İçeriği dikeyde merkezle */
+        border-bottom-left-radius: 20px; /* Alt sol köşeye yuvarlak köşe uygula */
+        cursor: pointer; /* İkona tıklanabilir bir imleç ataması yap */
+        z-index: 1; /* Z-index değeri 1, diğer elemanlardan üstte olmasını sağlar */
+    }
+
+/* Form başlığı stil ayarları */
+.form-box h2 {
+    font-size: 2em; /* Yazı boyutu 2em */
+    color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+    text-align: center; /* Yazıyı ortala */
+}
+
+/* Input kutusu stil ayarları */
+.input-box {
+    position: relative; /* Pozisyonunu göreceli olarak belirle */
+    width: 100%; /* Genişlik yüzde 100 */
+    height: 50px; /* Yükseklik 50 piksel */
+    border-bottom: 2px solid rgb(12, 173, 242); /* Alt kenara 2 piksel kalınlığında mavi tonunda çizgi ekle */
+    margin: 30px 0; /* Dış boşluk ayarla */
+}
+
+    /* Input etiketi stil ayarları */
+    .input-box label {
+        position: absolute; /* Pozisyonunu mutlak olarak belirle */
+        top: 50%; /* Üst kenardan yarı yükseklikte yerleştir */
+        left: 5px; /* Sol kenardan 5 piksel içeride */
+        transform: translateY( -50% ); /* Y ekseninde kendisinin yarı boyu kadar yukarı taşı */
+        font-size: 18px; /* Yazı boyutu 18px */
+        color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+        font-weight: 500; /* Yazı kalınlığı 500 */
+        pointer-events: none; /* Mouse etkileşimini devre dışı bırak */
+        transition: 0.5s; /* Geçiş efekti süresi 0.5 saniye */
+    }
+
+    /* Inputa odaklandığında veya değer girildiğinde etiket yukarı çıkıyor */
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+        top: -5px; /* Y ekseninde yukarı taşı */
+    }
+
+    /* Input kutusu stil ayarları */
+    .input-box input {
+        width: 100%; /* Genişlik yüzde 100 */
+        height: 100%; /* Yükseklik yüzde 100 */
+        background: transparent; /* Arka planı şeffaf yap */
+        border: none; /* Kenar çizgisini kaldır */
+        outline: none; /* Odaklandığında dış kenar çizgisini kaldır */
+        font-size: 18px; /* Yazı boyutu 18px */
+        color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+        font-weight: 600; /* Yazı kalınlığı 600 */
+        padding: 0 35px 0 5px; /* İç boşluk ayarla */
+    }
+
+    /* Input içindeki ikon stil ayarları */
+    .input-box .icon {
+        position: absolute; /* Pozisyonunu mutlak olarak belirle */
+        right: 8px; /* Sağ kenardan 8 piksel içeride */
+        font-size: 1.2em; /* Yazı boyutu 1.2em */
+        color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+        line-height: 57px; /* Satır yüksekliğini 57 piksel olarak ayarla */
+    }
+
+/* Hatırla ve Şifreyi unuttum kısımları stil ayarları */
+.remember-forgot {
+    font-size: 18px; /* Yazı boyutu 18px */
+    color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+    font-weight: 500; /* Yazı kalınlığı 500 */
+    margin: -15px 0 15px; /* Dış boşluk ayarla */
+    display: flex; /* Flex konteyner olarak kullan */
+    justify-content: space-between; /* İçeriği yatayda aralıklı yerleştir */
+}
+
+    /* Hatırla checkbox stil ayarları */
+    .remember-forgot label input {
+        accent-color: rgb(255, 255, 255); /* Vurgu rengini mavi tonu olarak ayarla */
+        margin-right: 3px; /* Sağ kenardan 3 piksel içeride */
+    }
+
+    /* Şifreyi unuttum bağlantısı stil ayarları */
+    .remember-forgot a {
+        color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+        text-decoration: none; /* Alt çizgiyi kaldır */
+    }
+
+        /* Şifreyi unuttum bağlantısı hover durumunda stil ayarları */
+        .remember-forgot a:hover {
+            text-decoration: underline; /* Hover durumunda alt çizgi ekle */
+        }
+
+/* Giriş veya Kayıt ol butonu stil ayarları */
+.btn {
+    width: 100%; /* Genişlik yüzde 100 */
+    height: 45px; /* Yükseklik 45 piksel */
+    background: rgb(12, 173, 242); /* Arka plan rengi mavi tonu */
+    border: none; /* Kenar çizgisini kaldır */
+    outline: none; /* Odaklandığında dış kenar çizgisini kaldır */
+    border-radius: 6px; /* Kenar yarıçapını 6 piksel olarak ayarla */
+    cursor: pointer; /* Butona tıklanabilir bir imleç ataması yap */
+    font-size: 18px; /* Yazı boyutu 18px */
+    color: #ffffff; /* Yazı rengi beyaz */
+    font-weight: 500; /* Yazı kalınlığı 500 */
+}
+
+/* Giriş veya Kayıt ol kısmı altındaki bağlantılar stil ayarları */
+.login-register {
+    font-size: 18px; /* Yazı boyutu 18px */
+    color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+    text-align: center; /* Yazıyı ortala */
+    font-weight: 500; /* Yazı kalınlığı 500 */
+    margin: 25px 0 10px; /* Dış boşluk ayarla */
+}
+
+    /* Kayıt ol bağlantısı stil ayarları */
+    .login-register p a {
+        color: rgb(255, 255, 255); /* Yazı rengi mavi tonu */
+        text-decoration: none; /* Alt çizgiyi kaldır */
+        font-weight: 600; /* Yazı kalınlığı 600 */
+    }
+
+        /* Kayıt ol bağlantısı hover durumunda stil ayarları */
+        .login-register p a:hover {
+            text-decoration: underline; /* Hover durumunda alt çizgi ekle */
+        }

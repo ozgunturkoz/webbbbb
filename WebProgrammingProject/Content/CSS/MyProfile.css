@@ -1,0 +1,392 @@
+﻿.profile-section {
+    padding: 20px;
+    margin-top: 2%;
+}
+
+.main-wrapper {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 600px;
+}
+
+.left-wrapper {
+    float: left;
+    width: 400px;
+    height: 100%;
+    background-color: #bbbbbb;
+    padding: 10px;
+}
+
+.button-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10%;
+}
+
+.profile-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    color: black;
+    background-color: #bbbbbb;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+    .profile-button:hover {
+        color: white;
+        background-color: #001d3d;
+    }
+
+.travel-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    color: black;
+    background-color: #bbbbbb;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+    .travel-button:hover {
+        color: white;
+        background-color: #001d3d;
+    }
+
+.security-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    color: black;
+    background-color: #bbbbbb;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+    .security-button:hover {
+        color: white;
+        background-color: #001d3d;
+    }
+
+.right-wrapper {
+    float: left;
+    flex-grow: 1;
+    background-color: #ecf0f1;
+    padding: 10px;
+    width: 1000px;
+    height: 100%;
+}
+
+h2 {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.personal-info {
+    margin-bottom: 1%;
+}
+
+.member-info {
+    margin-top: 1%;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.info-item-password {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    background-color: #bbbbbb;
+}
+
+.current-password {
+    background-color: #fff;
+    width: 20%;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .current-password:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+
+.new-password {
+    background-color: #fff;
+    width: 20%;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .new-password:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+
+.save-password-button {
+    margin-left: 3%;
+    font-size: 16px;
+    height: 45px;
+    width: 14%;
+    background: #001d3d;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.info-label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+.info-label-passport {
+    margin-left: 10px;
+    margin-top: 6%;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.info-input {
+    width: 200px;
+}
+
+.edit-button {
+    width: 10%;
+    background-color: #F0F0F0;
+    font-size: 13.3px;
+    color: black;
+}
+
+    .edit-button:hover {
+        width: 10%;
+        background-color: #001d3d;
+        color: white;
+    }
+
+.material-symbols-outlined.add-icon {
+    border: none;
+    outline: none;
+}
+
+    .material-symbols-outlined.add-icon:hover {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+        background-color: #F0F0F0;
+    }
+
+.right-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 3%;
+}
+
+.travel-info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 3%;
+}
+
+    .travel-info-list li {
+        float: left;
+        margin-bottom: 8px;
+    }
+
+    .travel-info-list a {
+        display: inline-block;
+        margin-right: 100px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+        .travel-info-list a:hover {
+            color: rgb(240, 136, 0);
+        }
+
+.password-criteria {
+    list-style: none;
+    padding: 0;
+    margin-top: 3%;
+}
+
+
+/* add Popup Styling */
+.add-popup {
+    position: fixed;
+    height: 40%;
+    top: 37%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #bbbbbb;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addGender {
+    float: left;
+    margin-right: 10%;
+}
+
+.add-popup label {
+    display: block;
+    margin-top: 5%;
+}
+
+/* Edit Popup Styling */
+.edit-popup {
+    display: none;
+    position: fixed;
+    height: 45%;
+    top: 44%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #bbbbbb;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editGender {
+    float: left;
+    margin-right: 10%;
+}
+
+.editGenderpass {
+    float: left;
+    margin-right: 10%;
+}
+
+.edit-popup label {
+    display: block;
+    margin-top: 5%;
+}
+
+.close-icon {
+    color: white;
+    position: absolute;
+    top: -1%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 25px; /* Çarpı simgesinin büyüklüğü */
+}
+
+.save-button {
+    background-color: #001d3d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 40%;
+    margin-left: 20%;
+}
+
+    .save-button:hover {
+        width: 60%;
+        margin-top: 40%;
+        margin-left: 20%;
+        background-color: #001d3d;
+        color: white;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 45%;
+    top: 44%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #bbbbbb;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    display: block;
+    margin-top: 5%;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: -1%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 25px; /* Çarpı simgesinin büyüklüğü */
+}
+
+.add-passport-button {
+    background-color: #001d3d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 40%;
+    margin-left: 20%;
+}
+
+.passport-info {
+    display: none;
+    margin-top: 20px;
+}
+
+    .passport-info h3 {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+#expirationInfo {
+    margin-top: 3%;
+    display: inline;
+}
+
+.edit-button-pass {
+    margin-top: 1%;
+    width: 10%;
+    font-size: 13.3px;
+    background-color: #F0F0F0;
+}
+
+    .edit-button-pass:hover {
+        background-color: #001d3d;
+        color: white;
+        font-size: 13.3px;
+    }

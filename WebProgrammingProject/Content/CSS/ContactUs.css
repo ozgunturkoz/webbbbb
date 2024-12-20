@@ -1,0 +1,221 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+
+.All {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+    position: relative;
+    display: flex;
+}
+
+
+.contact_us {
+    margin-bottom: 20px;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.baslik {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ContactUsTitle {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-family: Georgia, Times, serif;
+    color: #001d3d;
+    Font-size: 55px;
+}
+
+.ways_contact {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+}
+
+.send_message {
+    margin-top: 15px;
+    text-align: left;
+}
+
+    .send_message h2 {
+        color: Black;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+.message {
+    margin-bottom: 12px;
+}
+
+input, textarea {
+    width: 450px;
+    padding: 18px;
+    border-radius: 15px;
+    border: none;
+}
+
+textarea {
+    max-width: 449px;
+    max-height: 150px;
+}
+
+.button_send {
+    display: inline-block;
+    padding: 8px 210px;
+    border-radius: 15px;
+    background-color: rgb(12, 173, 242);
+    border: none;
+}
+
+.info_box {
+    border-radius: 15px;
+    /* background-color: rgb(201, 222, 230); */
+    text-align: left;
+    margin-top: -15px;
+    margin-left: -10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 90px;
+}
+
+.message_box {
+    border-radius: 15px;
+    /*background-color: rgb(12, 173, 242);*/
+    text-align: left;
+    margin-left: -300px;
+    margin-top: -15px;
+    padding-left: 300px;
+    padding-right: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*.map_box{
+    border-radius: 15px ;
+    background-color: rgb(12, 173, 242); 
+    text-align:left;
+    width:"400" ;
+    height:"500";
+    margin-left: -45px;
+    margin-top: -15px;
+    padding-top:10px;
+    
+    
+    
+}*/
+
+
+
+.contact_info {
+    margin-top: 15px;
+    width: 400px;
+    height: 210px;
+}
+
+    .contact_info h2 {
+        color: Black;
+        margin-left: 10px;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .contact_info p {
+        margin-top: 20px;
+        color: Black;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+ion-icon {
+    color: rgb(12, 173, 242);
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.socail_icons {
+    size: 45px;
+    font-size: 45px;
+    margin-top: 40px;
+    margin: 15px;
+}
+
+    .socail_icons:hover {
+        background: rgb(12, 173, 242);
+        color: Black;
+        border-radius: 10px;
+    }
+
+
+.map {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+footer {
+    width: 1900px;
+    height: 200px;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #001d3d;
+    border: 2px solid white;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+.footerList {
+    float: left;
+    width: 33.333333333%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footerh3 {
+    font-size: 36px;
+    color: #f5f5f5;
+}
+
+.footerHomeList {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.centerdivfooter {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.footer div {
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+}
+
+
+
+.text {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.footerinformation {
+    margin: auto;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}

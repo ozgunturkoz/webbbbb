@@ -1,0 +1,278 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.box-wrap > div {
+    display: none;
+}
+    /*flight-check-manage kÃ„Â±smÃ„Â±nÃ„Â± active etme kÃ„Â±smÃ„Â±*/
+    .box-wrap > div.active {
+        display: block;
+    }
+
+.search-flight-part {
+    background-color: rgba(204, 204, 204, 0.432);
+    z-index: 2;
+    position: relative;
+    transform: translateY(-35%);
+    height: 35%;
+    width: 90%;
+    margin-left: 6%;
+    border: 1px solid #001d3d;
+}
+/*TÃƒÂ¼m arama kÃ„Â±smÃ„Â±nÃ„Â± kapsar*/
+.tabbed-area {
+    width: 100%;
+    padding: 10px;
+    border-radius: 1%;
+}
+/*?*/
+.all .tabs-group {
+    width: 100%;
+    margin: 0;
+    padding-top: 1%;
+}
+/*flight-checkin-manage kÃ„Â±smÃ„Â± */
+.tabs-group {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+    text-align: center;
+}
+    /*flight checkin manage kÃ„Â±smÃ„Â± iÃƒÂ§in ayrÃ„Â± ayrÃ„Â± css*/
+    .tabs-group li {
+        list-style: none;
+        -webkit-border-radius: 3px 3px 0px 0px;
+        border-radius: 3px 3px 0px 0px;
+        background-color: #001d3d;
+        margin-right: 2px; /* SaÃ„Å¸ tarafta 10 piksel boÃ…Å¸luk */
+        float: left;
+        margin-bottom: 3%;
+    }
+        /* flight checkin manag kÃ„Â±smÃ„Â± iÃƒÂ§indeki yazÃ„Â±lar*/
+        .tabs-group li a {
+            background-color: #001d3d;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            padding: 0px 45px;
+            line-height: 2.9;
+            color: white;
+            -webkit-border-radius: 3px 3px 0px 0px;
+            border-radius: 3px 3px 0px 0px;
+        }
+            /*?*/
+
+            /*?*/
+            .tabs-group li a.current {
+                background-color: #fff;
+                border-top: 3px solid #e89b57;
+                color: #001d3d;
+                font-size: 18px;
+                -webkit-border-radius: 3px 3px 0px 0px;
+                border-radius: 3px 3px 0px 0px;
+            }
+/*radio butonun olduÃ„Å¸u satÃ„Â±r*/
+.radio-container {
+    display: flex;
+}
+
+.radio-round {
+    position: relative;
+    margin-right: 15px; /* Ã„Â°stediÃ„Å¸iniz aralÃ„Â±Ã„Å¸Ã„Â± ayarlayabilirsiniz */
+    cursor: pointer;
+}
+
+.radio-one {
+    position: relative;
+    margin-right: 15px; /* Ã„Â°stediÃ„Å¸iniz aralÃ„Â±Ã„Å¸Ã„Â± ayarlayabilirsiniz */
+    cursor: pointer;
+}
+
+.radio {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.radio:checked + .radio-label {
+    background-color: #001d3d; /* SeÃƒÂ§ili olduÃ„Å¸unda arka plan rengi deÃ„Å¸iÃ…Å¸tirilebilir */
+    color: white;
+}
+/*kalkÃ„Â±Ã…Å¸ varÃ„Â±Ã…Å¸ satÃ„Â±rÃ„Â± iÃƒÂ§in*/
+.flight-detail .check-detail .manage-detail {
+    width: 100%;
+    padding-bottom: 1%;
+}
+/* kalkÃ„Â±Ã…Å¸ yeri iÃƒÂ§in */
+.search-field-kalkis {
+    background-color: #fff;
+    width: 16%;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .search-field-kalkis:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+
+/* varÄ±ÅŸ yeri iÃ§in*/
+.search-field-varis {
+    background-color: #fff;
+    height: 55px;
+    width: 16%;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .search-field-varis:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+/*swap butonu iÃ§in */
+.swap-button {
+    font-size: 25px;
+    color: gray;
+    background-color: #e6f4f1;
+    border-radius: 20px;
+}
+/* /kalkÄ±ÅŸ tarihi/ */
+.date-field-kalkis {
+    background-color: #fff;
+    height: 55px;
+    width: 16%;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .date-field-kalkis:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+
+/* /varÄ±ÅŸ tarihi/ */
+.date-field-varis {
+    background-color: #fff;
+    height: 55px;
+    width: 16%;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .date-field-varis:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+
+/* yolcu sayÄ±sÄ± */
+.yolcu-sayisi {
+    background-color: #fff;
+    height: 55px;
+    width: 16%;
+    padding: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s;
+}
+
+    .yolcu-sayisi:focus {
+        box-shadow: 0 0 15px black; /* TÄ±klandÄ±ÄŸÄ±nda shadow ekler */
+        outline: none;
+    }
+/* online check Ã„Â±n yazÃ„Â±sÃ„Â±*/
+.h3-check-text {
+    background-color: white;
+    color: #001d3d;
+    font-size: 20px;
+    width: 15%;
+}
+/*checkin kÃ„Â±smÃ„Â±ndaki surname iÃƒÂ§in*/
+.check-in-surname {
+    background-color: #fff;
+    width: 16%;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+/*check in kÃ„Â±smÃ„Â± pnr*/
+.check-in-pnr {
+    background-color: #fff;
+    width: 16%;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+/*manage flight yazÃ„Â±sÃ„Â±*/
+.h3-manage-text {
+    background-color: white;
+    color: #001d3d;
+    font-size: 20px;
+    width: 15%;
+}
+/*manage kÃ„Â±smÃ„Â± surname*/
+.manage-surname {
+    background-color: #fff;
+    width: 16%;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+/*manage kismi pnr*/
+.manage-pnr {
+    background-color: #fff;
+    width: 16%;
+    height: 55px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+/*arama butonu iÃƒÂ§in*/
+.ucus-arama-butonu {
+    font-size: 16px;
+    background: #001d3d;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding:2%;
+    margin:1%;
+    text-decoration:none;
+}
+    /*hover ile ÃƒÂ¼stÃƒÂ¼ne gelindiÃ„Å¸inde hafif renk deÃ„Å¸iÃ…Å¸tir*/
+    .ucus-arama-butonu:hover {
+        background: #cedce7;
+        background: -webkit-linear-gradient( 45deg, rgb(12, 173, 242) 0%, rgb(6, 14, 118) 100% );
+    }

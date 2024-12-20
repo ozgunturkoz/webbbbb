@@ -1,0 +1,152 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+.photo {
+    margin-top: 4.8vw;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    background-color: rgba(24, 28, 35, 0.65);
+    width: 55%;
+    height: 60%;
+    padding: 10px;
+}
+
+    .overlay-text h3 {
+        margin: auto;
+        font-size: 2.6vw;
+    }
+
+    .overlay-text h5 {
+        margin: auto;
+        font-size: 1.6vw;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+.loungescontainer {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.context {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.icerik p {
+    margin-top: 20px;
+}
+
+.ortadiscizgi1 {
+    width: 100%;
+    border-top: 1px solid rgb(12, 173, 242);
+    border-bottom: 1px solid rgb(12, 173, 242);
+}
+
+.ortadiscizgi2 {
+    width: 100%;
+    border-bottom: 1px solid rgb(12, 173, 242);
+    margin-bottom: 40px;
+}
+
+.orta_alan1 {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orta_alan2 {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orta {
+    padding: 15px;
+    width: 2%;
+    margin: 0px;
+    box-sizing: border-box;
+    width: 450.05px;
+    height: 520.05px;
+    transition: 0.5s;
+}
+
+.ortacizgi {
+    padding: 15px;
+    width: 2%;
+    border-left: 1px solid rgb(12, 173, 242);
+    border-right: 1px solid rgb(12, 173, 242);
+    margin: 0px;
+    box-sizing: border-box;
+    width: 450.05;
+    height: 520.05;
+    transition: 0.5;
+}
+
+.orta .icerik {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px;
+    color: black;
+}
+
+.orta p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.orta h3 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.ortacizgi .icerik {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px;
+    color: black;
+}
+
+.ortacizgi p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.ortacizgi h3 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.Loungesimg {
+    height: 300px;
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

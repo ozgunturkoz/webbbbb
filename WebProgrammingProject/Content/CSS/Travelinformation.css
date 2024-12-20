@@ -1,0 +1,95 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+
+.travelinfo {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Travelinformationh1 {
+    font-size: 3em;
+    text-align: center;
+    color: rgb(6, 14, 118);
+    margin-top: 35%;
+}
+
+.Travelinformationbody {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Travelinformationcard {
+    float: left;
+    width: 400px;
+    height: 450px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #359ffc;
+    position: relative;
+    margin-bottom: 5rem;
+    margin-top: 50px;
+}
+
+.Travelinformationcard_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.Travelinformationcard_body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.Travelinformationcard:hover .Travelinformationcard_body {
+    right: 0;
+}
+
+.Travelinformationcard_title {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.Travelinformationcard_sub_title {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.Travelinformationcard_btn {
+    color: whitesmoke;
+    text-align: center;
+    background: #359ffc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 1000;
+    cursor: pointer;
+    margin-top: 30%;
+    margin-left: 0%;
+    text-decoration: none;
+    font-size: 1.25em;
+}

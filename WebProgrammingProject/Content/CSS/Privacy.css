@@ -1,0 +1,47 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+
+.privacyHeader h1 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+}
+
+.textBlock {
+    margin: 10px;
+    padding: 5 5 5 5px;
+    font-size: 100%;
+    line-height: 2.2rem;
+}
+
+    .textBlock p {
+        color: black;
+    }
+
+.privacy {
+    margin: 100px 10px 10px 10px;
+    /*padding:5 5 5 5px%;*/
+    padding: 0 30px 0 30px;
+    font-size: 100%;
+    line-height: 2.2rem;
+}
+
+.textBlock h3,
+h2 {
+    color: black;
+}
+
+.text a {
+    color: white;
+}
+
+.privacy ol li[value] {
+    /*liste numaraları rengi 1. 2. gibi*/
+    color: black;
+}
+
+/*        ************************************     help contact için küçük bir düzeltme : tel ve mail üstüne tıklanabilir oldu ************************/
+.helpContactContent a {
+    text-decoration: none;
+}
+/**************************************               **********************************************/

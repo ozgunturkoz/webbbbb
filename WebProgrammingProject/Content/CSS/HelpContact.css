@@ -1,0 +1,79 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+/* Yardım ve İletişim Bilgileri Bileşeni */
+.helpContact {
+    grid-template-columns: repeat( auto-fit, minmax(80px, 1fr) ); /* Grid kolonları otomatik olarak ayarlanır, minimum genişlik 80px, maksimum genişlik 1fr (eşit genişlik) */
+    width: 100%; /* Genişlik yüzde 100 */
+    height: 250px; /* Yükseklik 250px */
+    position: relative; /* Göreceli konumlandırma */
+    display: flex; /* Flexbox kullanımı */
+    align-items: center; /* Öğeleri dikey eksende ortala */
+    justify-content: center; /* Öğeleri yatay eksende ortala */
+    margin-top: 15px; /* Üst kenardan 15px boşluk bırak */
+    flex-direction: column; /* Dikey yönde sıralama */
+    color: white; /* Yazı rengi beyaz */
+    border-radius: 6px; /* Kenar yuvarlaklığı 6px */
+    background-color: #151414; /* Arka plan rengi koyu gri */
+}
+
+/* Yardım ve İletişim Başlık */
+.helpContactTitle {
+    margin-top: 1px; /* Üst kenardan 1px boşluk bırak */
+    font-size: 44px; /* Yazı boyutu 44px */
+}
+
+/* Yardım ve İletişim İçerik */
+.helpContactContent {
+    display: flex; /* Flexbox kullanımı */
+}
+
+/* Icon Stili */
+.icon {
+    font-size: 36px; /* Icon boyutu 36px */
+}
+
+/* Bağlantı Bilgileri Stili */
+.connectionInfo {
+    display: flex; /* Flexbox kullanımı */
+    align-items: center; /* Öğeleri dikey eksende ortala */
+    margin-right: 20px; /* Sağ kenardan 20px boşluk bırak */
+}
+
+/* Icon Konteyner Stili */
+.iconContainer {
+    margin-right: 10px; /* Sağ kenardan 10px boşluk bırak */
+    font-size: 1.2em; /* Yazı boyutu 1.2em */
+    color: white; /* Yazı rengi beyaz */
+    display: inline-block; /* Blok içinde inline öğeleri düzenleme */
+}
+
+/* Metin Stili */
+.text {
+    text-align: left; /* Metni sola hizala */
+    font-size: 20px; /* Yazı boyutu 20px */
+    color: white; /* Yazı rengi beyaz */
+    margin-right: 40px; /* Sağ kenardan 40px boşluk bırak */
+}
+
+/* İletişim Listesi */
+.contactList {
+    list-style: none; /* Liste işaretlerini gizle */
+    margin: auto; /* Merkezi hizalama */
+    padding: 0; /* Dış boşlukları sıfırla */
+    display: flex; /* Flexbox kullanımı */
+    float: inline-end; /* Sağa yasla */
+}
+
+    /* İletişim Listesi Öğesi */
+    .contactList li {
+        display: flex; /* Flexbox kullanımı */
+        align-items: center; /* Öğeleri dikey eksende ortala */
+    }
+
+/* Yardım ve İletişim Listesi */
+.helpContactlist {
+    margin-top: 30px; /* Üst kenardan 30px boşluk bırak */
+    margin-left: 400px; /* Sol kenardan 400px boşluk bırak */
+    font-size: 20px; /* Yazı boyutu 20px */
+    color: white; /* Yazı rengi beyaz */
+}

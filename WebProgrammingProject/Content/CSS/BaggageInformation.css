@@ -1,0 +1,90 @@
+﻿.Baggage-Information {
+    margin-top: 10%;
+}
+
+.Baggage-Header-layout {
+    background-color: black;
+}
+
+.Baggage-header {
+    width: 100%;
+    height: 250px;
+    background-image: url('../../webphoto/baggage1.jpg');
+    background-size: cover; /* Resmi alana sığdırır, ancak kesilebilir */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrarlamayı engelle */
+}
+
+.RESTRICTED-ITEMS {
+    background-image: url('../../webphoto/baggage3.jpg');
+    background-size: 250px 250px; /* Resmi alana sığdırır, ancak kesilebilir */
+    background-position: 0px 70px; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrarlamayı engelle */
+    width: 80%;
+    height: 350px;
+    background-color: rgba(204, 204, 204, 0.432);
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+
+
+.MUSICAL-INSTRUMENTS {
+    background-image: url('../../webphoto/baggage4.jpg'),url('../../webphoto/baggage2.jpg');
+    background-size: 250px 250px; /* Resmi alana sığdırı, ancak kesilebilir */
+    background-position: 0px 70px; /* Resmi ortala */
+    background-repeat: repeat-y; /* Tekrarlamayı engelle */
+
+    background-size: 250px 250px; /* Resmi alana sığdırır, ancak kesilebilir */
+    background-position: 0px 70px; /* Resmi ortala */
+    background-repeat: repeat-y; /* Tekrarlamayı engelle */
+
+    width: 80%;
+    height: auto;
+    background-color: rgba(204, 204, 204, 0.432);
+    margin-left: 10%;
+    border-radius: 10px;
+    color: black;
+    margin-top: 5%;
+}
+
+
+
+h2 {
+    color: #333;
+}
+
+/*table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #363535;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}*/
+
+/*th,*/
+/*td {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}*/
+
+/*th {
+    background-color: #998f8f;
+}*/
+
+.SPORTS-EQUIPMENT {
+    background-image: url('../../webphoto/baggage5(sports).jpg');
+    background-size: cover; /* Resmi alana sığdırır, ancak kesilebilir */
+    background-position: center; /* Resmi ortala */
+    background-repeat: no-repeat; /* Tekrarlamayı engelle */
+    width: 80%;
+    height: 800px;
+    background-color: rgba(204, 204, 204, 0.432);
+    margin-left: 10%;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}

@@ -1,0 +1,88 @@
+﻿
+/* slider teknik özelliklerini tanımladık  */
+.slider {
+    position: relative; /* Slider'ın pozisyonu belirlenir */
+    width: 1510px; /* Slider'ın genişliği */
+    height: 450px; /* Slider'ın yüksekliği */
+    overflow: hidden; /* Overflow kontrolü (içeriği sınırlar) */
+    border-radius: 6px; /* Slider kenarlarının yuvarlaklığı */
+    top: 0; /* Slider'ın en üstte başlaması için */
+    margin: auto; /* Otomatik genişlik ayarı ile ortalamak için */
+    margin-top: 60px; /* Üst kenardan gelen boşluk miktarı */
+    background-repeat: no-repeat; /* Arkaplan tekrarı yok */
+    background-position: center center; /* Arkaplanın ortalanması */
+    background-size: cover; /* Arkaplanın boyutu */
+    padding: 30px 0; /* İçeriğin üst ve altındaki dolgu miktarı */
+    background-image: no-repeat; /* Arkaplan tekrarı yok */
+}
+
+/* Slider'a resim düzeni */
+.SliderPhoto {
+    width: 100%; /* Resmin genişliği %100 */
+    height: 100%; /* Resmin yüksekliği %100 */
+    object-fit: cover; /* Nesne, öğenin boyutu ile orantılı olarak sığacak şekilde ölçeklenir */
+}
+
+/* Slider'da bulunan nesneler */
+.SliderPhoto2 {
+    width: 100%; /* Resmin genişliği %100 */
+    height: 450px; /* Resmin yüksekliği 450px */
+    object-fit: cover; /* Nesne, öğenin boyutu ile orantılı olarak sığacak şekilde ölçeklenir */
+}
+
+
+
+.slider-content {
+    position: absolute; /* İçerik mutlak konumlandırma ile yerleştirilir */
+    width: 500%; /* İçerik genişliği, slider genişliğinin 5 katı */
+    left: 0; /* İçeriği sola doğru 0px yerleştir */
+    animation: slide 20s infinite; /* slide animasyonunu 20 saniye boyunca tekrarla */
+}
+
+.slider-item {
+    width: 20%; /* Slider öğelerinin genişliği %20 */
+    float: left; /* Öğeleri sola doğru yüzer */
+}
+
+/* Fotoğraf kaydırma işlevini gerçekleştiren bölüm */
+@keyframes slide {
+    0% {
+        transform: translateX(0px); /* 0% noktasında kaydırma yok */
+    }
+
+    10% {
+        transform: translateX(-1510px); /* 10% noktasında -1520px sola kaydırma */
+    }
+
+    20% {
+        transform: translateX(-1510px); /* 20% noktasında -1520px sola kaydırma */
+    }
+
+    30% {
+        transform: translateX(-3020px); /* 30% noktasında -3040px sola kaydırma */
+    }
+
+    40% {
+        transform: translateX(-3020px); /* 40% noktasında -3040px sola kaydırma */
+    }
+
+    50% {
+        transform: translateX(-4530px); /* 50% noktasında -4560px sola kaydırma */
+    }
+
+    60% {
+        transform: translateX(-4530px); /* 60% noktasında -4560px sola kaydırma */
+    }
+
+    70% {
+        transform: translateX(-6040px); /* 70% noktasında -6080px sola kaydırma */
+    }
+
+    80% {
+        transform: translateX(-6040px); /* 80% noktasında -6080px sola kaydırma */
+    }
+
+    90% {
+        transform: translateX(0px); /* 90% noktasında kaydırma yok (başa dön) */
+    }
+}

@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Travelınfo";
+}
+
+<html>
+<head>
+
+    <!-- Meta etiketleri -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IW = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Sayfa başlığı -->
+    <title>SKY LINE - Travel Info</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+material-symbols-outlined"
+          rel="stylesheet">
+
+    <!-- Font Awesome ikon kitinin bağlantısı -->
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="Travelinformationbody">
+
+
+
+    <div class="travelinfo">
+
+        <h1 class="Travelinformationh1">Travel Information</h1>
+
+        <div class="Travelinformationcard">
+            <img class="Travelinformationcard_img" src="~/WebPhoto/EarthPic.jpg">
+
+            <div class="Travelinformationcard_body">
+                <h1 class="Travelinformationcard_title">Country Information</h1>
+                <a href="@Url.Action("Countryinfo", "Home")" class="Travelinformationcard_btn">View More</a>
+
+            </div>
+        </div>
+
+
+        <div class="Travelinformationcard">
+            <img class="Travelinformationcard_img" src="~/WebPhoto/SA_BUGGY_410x368_Homepage.jpg">
+
+            <div class="Travelinformationcard_body">
+                <h1 class="Travelinformationcard_title">Connection Services</h1>
+
+                <p class="Travelinformationcard_sub_title">
+                    We are constantly striving to make your connection smoother and your journey better.  In our key hubs, we bring our member airlines together under one roof, so they can share services like common check-in, transfer and baggage facilities. <br /><br />
+                    In addition, with our self-service initiatives you can take more control of the airport steps in your trip, making your whole travel experience more tailored to your needs.<br /><br />
+
+                    We have 1,000 employees working behind the scenes worldwide, so that you spend less time moving, and more time making the most of your trip.<br />
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="Travelinformationcard">
+            <img class="Travelinformationcard_img" src="~/WebPhoto/Tile_baggage_tracer.jpg">
+            <div class="Travelinformationcard_body">
+                <h1 class="Travelinformationcard_title">Baggage</h1>
+                <a href="@Url.Action("BaggageInformation", "Home")" class="Travelinformationcard_btn">View More</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

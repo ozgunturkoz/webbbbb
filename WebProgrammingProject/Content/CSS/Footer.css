@@ -1,0 +1,121 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Lilita+One&family=Playfair+Display&family=Roboto:wght@500&display=swap");
+
+/* Genel stil ayarları */
+.footerul {
+    margin-left: 0px; /* Dış boşluğu sıfırla */
+    padding: 0px; /* İç boşluğu sıfırla */
+    font-size: 18px; /* Yazı boyutu 18px */
+}
+
+/* Footer Bölümü Genel Ayarları */
+.footer-section {
+    width: 100%; /* Genişlik yüzde 100 */
+    background: #151414; /* Arkaplan rengi koyu gri tonu */
+    position: relative; /* Göreceli konumlandırma */
+}
+
+/* Footer İçeriği Genel Ayarları */
+.footer-content {
+    position: relative; /* Göreceli konumlandırma */
+    z-index: 2; /* Z indeksi 2 */
+}
+
+/* Footer Sosyal Medya İkonları */
+.footer-social-icon {
+    text-align: center; /* Metni ortala */
+}
+
+    .footer-social-icon span {
+        color: #fff; /* Yazı rengi beyaz */
+        display: block; /* Blok olarak görüntüle */
+        font-size: 20px; /* Yazı boyutu 20px */
+        font-weight: 700; /* Yazı kalınlığı 700 */
+        font-family: "Poppins", sans-serif; /* Yazı fontu Poppins veya sans-serif fallback */
+        margin-bottom: 20px; /* Alt kenardan 20px boşluk bırak */
+    }
+
+    .footer-social-icon a {
+        color: #fff; /* Link rengi beyaz */
+        font-size: 16px; /* Yazı boyutu 16px */
+        margin-right: 15px; /* Sağ kenardan 15px boşluk bırak */
+    }
+
+    .footer-social-icon i {
+        height: 40px; /* Ikon yüksekliği 40px */
+        width: 40px; /* Ikon genişliği 40px */
+        text-align: center; /* Metni ortala */
+        line-height: 38px; /* Satır yüksekliği 38px */
+        border-radius: 50%; /* Kenar yuvarlaklığı yüzde 50 */
+    }
+
+/* Footer Widget Başlık Stili */
+.footer-widget-heading h3 {
+    color: #fff; /* Yazı rengi beyaz */
+    font-size: 20px; /* Yazı boyutu 20px */
+    font-weight: 600; /* Yazı kalınlığı 600 */
+    margin-bottom: 40px; /* Alt kenardan 40px boşluk bırak */
+    position: relative; /* Göreceli konumlandırma */
+}
+
+    .footer-widget-heading h3::before {
+        content: ""; /* İçerik yok */
+        position: absolute; /* Mutlak konumlandırma */
+        left: 0; /* Sol kenardan 0px uzaklıkta */
+        bottom: -15px; /* Alt kenardan -15px uzaklıkta */
+        height: 2px; /* Çizginin yüksekliği 2px */
+        width: 50px; /* Çizginin genişliği 50px */
+        background: #359ffc; /* Çizgi rengi mavi tonu */
+    }
+
+.footer-widget {
+    padding-top: 10px;
+}
+
+    /* Footer Widget Listesi Stili */
+    .footer-widget ul li {
+        display: inline-block; /* Blok içinde inline öğeleri düzenleme */
+        width: 50%; /* Genişlik yüzde 50 */
+        float: left; /* Sola yasla */
+        margin-bottom: 12px; /* Alt kenardan 12px boşluk bırak */
+        text-align: center; /* Metni ortala */
+    }
+
+        .footer-widget ul li a:hover {
+            color: #359ffc; /* Hover durumunda link rengi mavi tonu */
+        }
+
+        .footer-widget ul li a {
+            text-decoration: none;
+            color: #878787; /* Link rengi gri tonu */
+            text-transform: capitalize; /* Yazı stilini baş harfleri büyük yap */
+        }
+
+/* Telif Hakkı Alanı Stili */
+.copyright-area {
+    background: #202020; /* Arkaplan rengi koyu gri tonu */
+    padding: 25px 0; /* Dolgu miktarı üst ve alt 25px, sağ ve sol 0 */
+    text-align: center; /* Metni ortala */
+}
+
+/* Telif Hakkı Metni Stili */
+.copyright-text p {
+    margin: 0; /* Dış boşluğu sıfırla */
+    font-size: 18px; /* Yazı boyutu 18px */
+    color: #878787; /* Yazı rengi gri tonu */
+}
+
+/* Footer Menü Listesi Stili */
+.footer-menu li {
+    display: inline-block; /* Blok içinde inline öğeleri düzenleme */
+    margin-left: 20px; /* Sol kenardan 20px boşluk bırak */
+}
+
+    .footer-menu li:hover a {
+        color: #359ffc; /* Hover durumunda link rengi mavi tonu */
+    }
+
+    .footer-menu li a {
+        font-size: 14px; /* Yazı boyutu 14px */
+        color: #878787; /* Link rengi gri tonu */
+        text-align: center; /* Metni ortala */
+    }

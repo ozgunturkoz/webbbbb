@@ -1,0 +1,119 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.main {
+    display: flex;
+}
+
+.passenger-info {
+    position: fixed;
+    bottom: 52%;
+    left: 10%;
+    width: 21.875rem;
+    height: 15.625rem;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    box-sizing: border-box;
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+    .passenger-info h2 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .passenger-info p {
+        margin: 0.625rem 0;
+        line-height: 1.6;
+        color: #666;
+    }
+
+.seat-map {
+    margin-left: 1.25rem;
+    padding: 1.25rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 10%;
+}
+
+#seat-map {
+    display: grid;
+    grid-template-columns: repeat(7, 2.5rem);
+    grid-gap: 0.3125rem;
+}
+
+.seat-map h2 {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.seat {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #b2b2b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10%;
+}
+
+    .seat.corridor,
+    .seat.exit {
+        background-color: #ff0000;
+    }
+
+    .seat.selected {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+#continueBtn {
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-bottom: 8%;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #888888, -6px -6px 12px #ffffff;
+}
+
+    #continueBtn::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgb(6, 14, 118) 0%, rgb(104, 132, 255) 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+    }
+
+    #continueBtn:hover::before {
+        width: 9em;
+    }

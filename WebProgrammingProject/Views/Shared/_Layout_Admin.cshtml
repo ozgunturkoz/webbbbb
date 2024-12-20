@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    <link rel="stylesheet" href="~/Content/CSS/AboutUs.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Anasayfa_Card.css" />
+    <link rel="stylesheet" href="~/Content/CSS/BaggageInformation.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Beforeyouflycards.css" />
+    <link rel="stylesheet" href="~/Content/CSS/ContactUs.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Countryinfo.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Enternewpassword.css" />
+    <link rel="stylesheet" href="~/Content/CSS/FAQ.css" />
+    <link rel="stylesheet" href="~/Content/CSS/FlyinWithSkylines.css" />
+    <link rel="stylesheet" href="~/Content/CSS/FlySearch.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Footer.css" />
+    <link rel="stylesheet" href="~/Content/CSS/ForgotPassword.css" />
+    <link rel="stylesheet" href="~/Content/CSS/HelpContact.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Login.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Loungesinformation.css" />
+    <link rel="stylesheet" href="~/Content/CSS/MyProfile.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Navbar.css" />
+    <link rel="stylesheet" href="~/Content/CSS/PassengerDetails.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Payment.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Policy.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Privacy.css" />
+    <link rel="stylesheet" href="~/Content/CSS/SelectFlight.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Slider.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Travelinformation.css" />
+    <link rel="stylesheet" href="~/Content/CSS/Upgradeinformation.css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/JS/script.js" defer></script>
+</head>
+
+<body class="main-layout">
+
+
+    <!-- **************************************************  NAVBAR PART   **************************************************  -->
+
+    <header>
+        <!-- Site başlığı -->
+        <a href="index.html" class="Skyfly">SKY LINES</a>
+
+        <!-- Arama kutusu -->
+        <div class="search-bar-container active">
+            <!-- Arama ikonu -->
+            <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/magnifier-512.png"
+                 alt="magnifier"
+                 class="magnifier" />
+            <!-- Arama inputu -->
+            <input type="text" class="input" placeholder="Search ..." />
+        </div>
+
+        <!-- Navigasyon menüsü -->
+        <nav>
+            <!-- Menü bağlantıları -->
+            <a class="navigation-a" href="@Url.Action("Index", "Flight_Details")">Flights</a>
+            <a class="navigation-a" href="@Url.Action("Index", "Home")">Home</a>
+            <a class="navigation-a" href="@Url.Action("Login", "Account")">Login</a>
+
+        </nav>
+    </header>
+
+
+</body>
+
+@RenderBody()
+
+<!-- **************************************************  HELP CONTACT PART    **************************************************-->
+
+
+
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+
+
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="https://www.facebook.com/?locale=tr_TR"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="https://twitter.com/login?lang=tr"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="https://www.linkedin.com/home"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="https://www.youtube.com/"><ion-icon name="logo-youtube"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+
+                        <ul class="footerul">
+                            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            <li><a href="#">Cargo</a></li>
+                            <li><a href="@Url.Action("ContactUs", "Home")">Contact Us</a></li>
+                            <li><a href="#">Booking</a></li>
+                            <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                            <li><a href="@Url.Action("FAQ", "Home")">Frequently Asked Questions</a></li>
+                            <li><a href="#">Check In</a></li>
+                            <li><a href="Privacy.html">Privacy</a></li>
+                            <li><a href="Policy.html">Policy</a></li>
+                            <li><a href="@Url.Action("BaggageInformation", "Home")">Baggage</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                    <p>Copyright &copy; 2023, All Right Reserved <a href="https://codepen.io/anupkumar92/"></a></p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
